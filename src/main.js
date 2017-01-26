@@ -3,7 +3,7 @@ let offset = 0;
 let interval = null;
 
 let settings = {
-    speed: 300,
+    speed: 150,
     maxOffset: 700,
     startOffset: 400,
 };

@@ -97,10 +97,10 @@ console.log('Api');
 console.log('window.setSpeed(speed)', 'speed: in ms to itterate');
 console.log('window.setMaxOffset(num)', 'num: max itterations');
 console.log('window.restart()', 'restarts the thing');
-console.log('Starting in 3, 2, 1');
+console.log('Starting in 5s');
 setTimeout(function () {
     restart();
-}, 3000);
+}, 5000);
 
 window.restart = restart;
 window.setSpeed = function (s) {

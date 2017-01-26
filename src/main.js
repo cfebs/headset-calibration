@@ -31,8 +31,8 @@ const cursorLeft = document.querySelector('.cursor-left');
 const cursorRight = document.querySelector('.cursor-right');
 
 function moveCursors(x) {
-    cursorLeft.style.cssText = `left: calc(50% - ${x}px - 75px)`;
-    cursorRight.style.cssText = `left: calc(50% + ${x}px - 75px)`;
+    cursorLeft.setAttribute('style', `left: calc(50% - 100px); transform: translateX(${x * -1}px);`);
+    cursorRight.setAttribute('style', `left: calc(50% - 100px); transform: translateX(${x}px);`);
     cursorLeft.innerHTML = x;
     cursorRight.innerHTML = x;
 }

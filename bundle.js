@@ -43,8 +43,9 @@ var offset = 0;
 var interval = null;
 
 var settings = {
-    speed: 100,
-    maxOffset: 400
+    speed: 300,
+    maxOffset: 700,
+    startOffset: 400
 };
 
 var parseHash = function parseHash() {
@@ -80,7 +81,7 @@ function moveCursors(x) {
 }
 
 function restart() {
-    offset = 0;
+    offset = settings.startOffset;
     if (interval) {
         clearInterval(interval);
     }
@@ -98,6 +99,7 @@ function restart() {
 console.log('Api');
 console.log('window.setSpeed(speed)', 'speed: in ms to itterate');
 console.log('window.setMaxOffset(num)', 'num: max itterations');
+console.log('window.setStartOffset(num)', 'num: which one to start on');
 console.log('window.restart()', 'restarts the thing');
 console.log('Starting in 5s');
 setTimeout(function () {
@@ -113,6 +115,13 @@ window.setSpeed = function (s) {
 window.setMaxOffset = function (m) {
     if (m > 1) {
         settings.maxOffset = m;
+    }
+    restart();
+};
+
+window.setStartOffset = function (m) {
+    if (m > 1) {
+        settings.startOffset = m;
     }
     restart();
 };

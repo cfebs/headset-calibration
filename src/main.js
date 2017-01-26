@@ -4,8 +4,8 @@ let interval = null;
 
 let settings = {
     speed: 150,
-    maxOffset: 700,
-    startOffset: 400,
+    maxOffset: 190,
+    startOffset: 140,
 };
 
 const parseHash = () => {

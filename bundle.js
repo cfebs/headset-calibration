@@ -43,9 +43,9 @@ var offset = 0;
 var interval = null;
 
 var settings = {
-    speed: 300,
-    maxOffset: 700,
-    startOffset: 400
+    speed: 150,
+    maxOffset: 190,
+    startOffset: 140
 };
 
 var parseHash = function parseHash() {

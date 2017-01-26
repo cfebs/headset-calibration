@@ -73,8 +73,10 @@ var cursorLeft = document.querySelector('.cursor-left');
 var cursorRight = document.querySelector('.cursor-right');
 
 function moveCursors(x) {
-    cursorLeft.style.cssText = 'left: calc(50% - ' + x + 'px - 25px)';
-    cursorRight.style.cssText = 'left: calc(50% + ' + x + 'px - 25px)';
+    cursorLeft.style.cssText = 'left: calc(50% - ' + x + 'px - 75px)';
+    cursorRight.style.cssText = 'left: calc(50% + ' + x + 'px - 75px)';
+    cursorLeft.innerHTML = x;
+    cursorRight.innerHTML = x;
 }
 
 function restart() {
